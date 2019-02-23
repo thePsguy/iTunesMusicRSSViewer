@@ -20,8 +20,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(tableView)
+        view.addSubview(typePicker)
+        view.addSubview(resultCount)
         setupRootViews()
         fetchFeedData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupRootViews()
     }
     
     func setupRootViews() {
@@ -30,19 +37,19 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds.applying(CGAffineTransform(scaleX: 1, y: 0.75)).offsetBy(dx: 0, dy: 0.25 * view.bounds.height)
-        view.addSubview(tableView)
+        
         
         typePicker.tag = iTunesClient.RSSOptions.MediaType.rawValue
         typePicker.dataSource = self
         typePicker.delegate = self
-        typePicker.frame = view.bounds.applying(CGAffineTransform(scaleX: 1, y: 0.125))
-        view.addSubview(typePicker)
+        typePicker.frame = view.bounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.25))
+        
         
         resultCount.tag = iTunesClient.RSSOptions.MediaCount.rawValue
         resultCount.dataSource = self
         resultCount.delegate = self
-        resultCount.frame = view.bounds.applying(CGAffineTransform(scaleX: 1, y: 0.125)).offsetBy(dx: 0, dy: 0.125*view.bounds.height)
-        view.addSubview(resultCount)
+        resultCount.frame = view.bounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.25)).offsetBy(dx: 0.5*view.bounds.width, dy: 0)
+        
     }
     
     func fetchFeedData() {
