@@ -50,6 +50,9 @@ class iTunesTableViewCell: UITableViewCell {
     }
 
     func setup(withObject object: RSSMusic) {
+        let rgen = CGFloat.random(in: 0...1)
+        contentView.backgroundColor = UIColor.init(white: rgen, alpha: 0.15)
+        
         self.textLabel?.text = object.title
         self.upperRightLabel.text = object.artist
         self.bottomRightLabel.text = object.kind?.capitalized

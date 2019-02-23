@@ -13,7 +13,6 @@ extension iTunesClient {
     func MusicForEndpoint(endpointUrl: String, count: Int, completion: @escaping (_ error: String?, _ objects: [RSSMusic]?) -> Void) {
         
         let endpointUrl = endpointUrl + "\(count)" + "/explicit.json"
-        print(endpointUrl)
         let requestURL = self.iTunesUrlFromEndpoint(withPathExtension: endpointUrl)
         
         let request = URLRequest(url: requestURL)

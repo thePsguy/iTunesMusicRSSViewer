@@ -34,18 +34,22 @@ class MainViewController: UIViewController {
     func setupRootViews() {
         view.backgroundColor = .white
         tableView.register(iTunesTableViewCell.self, forCellReuseIdentifier: iTunesTableViewCell.cellIdentifier)
+        tableView.backgroundColor = UIColor.init(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
+        tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds.applying(CGAffineTransform(scaleX: 1, y: 0.75)).offsetBy(dx: 0, dy: 0.25 * view.bounds.height)
         
         
         typePicker.tag = iTunesClient.RSSOptions.MediaType.rawValue
+        typePicker.backgroundColor = UIColor.init(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
         typePicker.dataSource = self
         typePicker.delegate = self
         typePicker.frame = view.bounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.25))
         
         
         resultCount.tag = iTunesClient.RSSOptions.MediaCount.rawValue
+        resultCount.backgroundColor = UIColor.init(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.7)
         resultCount.dataSource = self
         resultCount.delegate = self
         resultCount.frame = view.bounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.25)).offsetBy(dx: 0.5*view.bounds.width, dy: 0)
