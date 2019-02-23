@@ -16,6 +16,7 @@
 		4DC3B3D72220DA1100C49D12 /* iTunesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3D62220DA1100C49D12 /* iTunesConstants.swift */; };
 		4DC3B3DC2220DEFF00C49D12 /* RSSMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3DB2220DEFF00C49D12 /* RSSMusic.swift */; };
 		4DC3B3DE2220E3D100C49D12 /* iTunesConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3DD2220E3D100C49D12 /* iTunesConvenience.swift */; };
+		4DC3B3E02221A7EC00C49D12 /* iTunesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3DF2221A7EC00C49D12 /* iTunesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4DC3B3D62220DA1100C49D12 /* iTunesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesConstants.swift; sourceTree = "<group>"; };
 		4DC3B3DB2220DEFF00C49D12 /* RSSMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSMusic.swift; sourceTree = "<group>"; };
 		4DC3B3DD2220E3D100C49D12 /* iTunesConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesConvenience.swift; sourceTree = "<group>"; };
+		4DC3B3DF2221A7EC00C49D12 /* iTunesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				4DC3B3C02220D3D800C49D12 /* AppDelegate.swift */,
 				4DC3B3C22220D3D800C49D12 /* MainViewController.swift */,
 				4DC3B3D22220D4E300C49D12 /* MainViewController+Delegates.swift */,
+				4DC3B3DF2221A7EC00C49D12 /* iTunesTableViewCell.swift */,
 				4DC3B3D82220DA2800C49D12 /* Network */,
 				4DC3B3C72220D3DA00C49D12 /* Assets.xcassets */,
 				4DC3B3C92220D3DA00C49D12 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				4DC3B3DE2220E3D100C49D12 /* iTunesConvenience.swift in Sources */,
 				4DC3B3D72220DA1100C49D12 /* iTunesConstants.swift in Sources */,
 				4DC3B3C12220D3D800C49D12 /* AppDelegate.swift in Sources */,
+				4DC3B3E02221A7EC00C49D12 /* iTunesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

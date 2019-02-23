@@ -15,8 +15,8 @@ struct RSSMusic {
     let title: String?
     let artist: String?
     let kind: String?
-    let albumArt: NSURL?
-    let itunesUrl: NSURL?
+    let albumArt: URL?
+    let itunesUrl: URL?
     
     // MARK: Initializers
     
@@ -29,14 +29,14 @@ struct RSSMusic {
         artist = dictionary[keys.artist] as? String
         kind = dictionary[keys.kind] as? String
         if let albumArtUrl = dictionary[keys.albumArt] as? String {
-            albumArt = NSURL(string: albumArtUrl)
+            albumArt = URL(string: albumArtUrl)
         } else {
-            albumArt = NSURL()
+            albumArt = nil
         }
         if let url = dictionary[keys.url] as? String {
-            itunesUrl = NSURL(string: url)
+            itunesUrl = URL(string: url)
         } else {
-            itunesUrl = NSURL()
+            itunesUrl = nil
         }
     }
     

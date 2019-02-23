@@ -13,14 +13,17 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UIPick
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
+//        if let url = self.objects[indexPath.row].itunesUrl {
+//            print(url)
+//            UIApplication.shared.open(url)
+//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let rgen = CGFloat.random(in: 0...1)
+        let cell = tableView.dequeueReusableCell(withIdentifier: iTunesTableViewCell.cellIdentifier) as! iTunesTableViewCell
         let obj = self.objects[indexPath.row]
-        cell.textLabel?.text = obj.title
-        cell.contentView.backgroundColor = UIColor(red: rgen, green: 0.5, blue: 0.7, alpha: 1.0)
+        cell.setup(withObject: obj)
+        
         return cell
     }
     
@@ -33,19 +36,41 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UIPick
     }
  
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+        switch pickerView.tag {
+        case iTunesClient.RSSOptions.MediaType.rawValue:
+            return 2
+        case iTunesClient.RSSOptions.MediaCount.rawValue:
+            return 10
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
+       self.fetchFeedData()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row)"
+        switch pickerView.tag {
+        case iTunesClient.RSSOptions.MediaType.rawValue:
+            if row == 0 {
+                return iTunesClient.MediaTypes.AppleMusic
+            } else {
+                return iTunesClient.MediaTypes.iTunesMusic
+            }
+        case iTunesClient.RSSOptions.MediaCount.rawValue:
+            return "\((row+1)*2)"
+        default:
+            return ""
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     
 }

@@ -12,26 +12,24 @@ extension iTunesClient {
     
     struct Constants {
         static let APIScheme = "https"
-        //https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/10/explicit.json
         static let APIHost = "rss.itunes.apple.com"
         static let APIPath = "/api/v1/us/"
-        
-        static let APIKey = "fa09d9190adfbcebb85a952cfd57a1c6"
-        static let Secret = "d7eb357bef026863"
-        static let BaseUrl = "https://rss.itunes.apple.com/api/v1/us"
-        static let setSize = 21
     }
     
     
     // MARK: iTunes Endpoint Values
     struct RSSEndpoints {
-        static let AppleMusic = "apple-music/hot-tracks/all/10/explicit.json"
-        static let iTunesMusic = "itunes-music/hot-tracks/all/10/explicit.json"
+        static let AppleMusic = "apple-music/hot-tracks/all/"
+        static let iTunesMusic = "itunes-music/hot-tracks/all/"
     }
     
     struct MediaTypes {
         static let iTunesMusic = "iTunes Music"
         static let AppleMusic = "Apple Music"
+    }
+    
+    enum RSSOptions: Int {
+        case MediaType = 0, MediaCount
     }
     
     // MARK: iTunes Response Keys
