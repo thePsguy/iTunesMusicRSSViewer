@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		4DC3B3C12220D3D800C49D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3C02220D3D800C49D12 /* AppDelegate.swift */; };
-		4DC3B3C32220D3D800C49D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3C22220D3D800C49D12 /* ViewController.swift */; };
-		4DC3B3C62220D3D800C49D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC3B3C42220D3D800C49D12 /* Main.storyboard */; };
+		4DC3B3C32220D3D800C49D12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3C22220D3D800C49D12 /* MainViewController.swift */; };
 		4DC3B3C82220D3DA00C49D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC3B3C72220D3DA00C49D12 /* Assets.xcassets */; };
 		4DC3B3CB2220D3DA00C49D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC3B3C92220D3DA00C49D12 /* LaunchScreen.storyboard */; };
+		4DC3B3D32220D4E300C49D12 /* MainViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3D22220D4E300C49D12 /* MainViewController+Delegates.swift */; };
+		4DC3B3D52220D9DE00C49D12 /* iTunesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3D42220D9DE00C49D12 /* iTunesClient.swift */; };
+		4DC3B3D72220DA1100C49D12 /* iTunesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3D62220DA1100C49D12 /* iTunesConstants.swift */; };
+		4DC3B3DC2220DEFF00C49D12 /* RSSMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3DB2220DEFF00C49D12 /* RSSMusic.swift */; };
+		4DC3B3DE2220E3D100C49D12 /* iTunesConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3B3DD2220E3D100C49D12 /* iTunesConvenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DC3B3BD2220D3D800C49D12 /* GeniusPlazaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeniusPlazaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC3B3C02220D3D800C49D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DC3B3C22220D3D800C49D12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4DC3B3C52220D3D800C49D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DC3B3C22220D3D800C49D12 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4DC3B3C72220D3DA00C49D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC3B3CA2220D3DA00C49D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC3B3CC2220D3DA00C49D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC3B3D22220D4E300C49D12 /* MainViewController+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Delegates.swift"; sourceTree = "<group>"; };
+		4DC3B3D42220D9DE00C49D12 /* iTunesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesClient.swift; sourceTree = "<group>"; };
+		4DC3B3D62220DA1100C49D12 /* iTunesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesConstants.swift; sourceTree = "<group>"; };
+		4DC3B3DB2220DEFF00C49D12 /* RSSMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSMusic.swift; sourceTree = "<group>"; };
+		4DC3B3DD2220E3D100C49D12 /* iTunesConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesConvenience.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,25 @@
 			isa = PBXGroup;
 			children = (
 				4DC3B3C02220D3D800C49D12 /* AppDelegate.swift */,
-				4DC3B3C22220D3D800C49D12 /* ViewController.swift */,
-				4DC3B3C42220D3D800C49D12 /* Main.storyboard */,
+				4DC3B3C22220D3D800C49D12 /* MainViewController.swift */,
+				4DC3B3D22220D4E300C49D12 /* MainViewController+Delegates.swift */,
+				4DC3B3D82220DA2800C49D12 /* Network */,
 				4DC3B3C72220D3DA00C49D12 /* Assets.xcassets */,
 				4DC3B3C92220D3DA00C49D12 /* LaunchScreen.storyboard */,
 				4DC3B3CC2220D3DA00C49D12 /* Info.plist */,
 			);
 			path = GeniusPlazaChallenge;
+			sourceTree = "<group>";
+		};
+		4DC3B3D82220DA2800C49D12 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4DC3B3D42220D9DE00C49D12 /* iTunesClient.swift */,
+				4DC3B3DB2220DEFF00C49D12 /* RSSMusic.swift */,
+				4DC3B3D62220DA1100C49D12 /* iTunesConstants.swift */,
+				4DC3B3DD2220E3D100C49D12 /* iTunesConvenience.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +144,6 @@
 			files = (
 				4DC3B3CB2220D3DA00C49D12 /* LaunchScreen.storyboard in Resources */,
 				4DC3B3C82220D3DA00C49D12 /* Assets.xcassets in Resources */,
-				4DC3B3C62220D3D800C49D12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC3B3C32220D3D800C49D12 /* ViewController.swift in Sources */,
+				4DC3B3D52220D9DE00C49D12 /* iTunesClient.swift in Sources */,
+				4DC3B3DC2220DEFF00C49D12 /* RSSMusic.swift in Sources */,
+				4DC3B3C32220D3D800C49D12 /* MainViewController.swift in Sources */,
+				4DC3B3D32220D4E300C49D12 /* MainViewController+Delegates.swift in Sources */,
+				4DC3B3DE2220E3D100C49D12 /* iTunesConvenience.swift in Sources */,
+				4DC3B3D72220DA1100C49D12 /* iTunesConstants.swift in Sources */,
 				4DC3B3C12220D3D800C49D12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4DC3B3C42220D3D800C49D12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DC3B3C52220D3D800C49D12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4DC3B3C92220D3DA00C49D12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
